@@ -1,6 +1,19 @@
+  
+// stores the deck 
 var deck = ["Liberal", "Liberal", "Liberal", "Liberal", "Liberal", "Liberal", "Fascist", "Fascist", "Fascist", "Fascist", "Fascist", "Fascist", "Fascist", "Fascist", "Fascist", "Fascist", "Fascist"]
-var i = 0;
 
+// play music
+function playAudio(url) {
+  var a = new Audio(url);
+  a.play();
+}
+
+// sound chosen
+// button.mp3
+// click2.wav
+var sound = 'realplay.m4a'
+
+// random shuffle
 function shuffle()
 {
   // for 1000 turns
@@ -17,15 +30,11 @@ function shuffle()
 
 }
 
-function nextItem() {
-    i = i + 1; // increase i by one
-    i = i % deck.length; // if we've gone too high, start from `0` again
-    return deck[i]; // give us back the item of where we are now
-}
-
+// shuffle the deck
 shuffle()
 
-i = 0;
+// counter
+var i = 0;
 
 function hitMe() {
   var btn = document.createElement("p");
@@ -34,13 +43,62 @@ function hitMe() {
   i++;
 }
 
-/*
-document.getElementById('next_button').addEventListener(
-    'click', // we want to listen for a click
-    function (e) { // the e here is the event itself
-        document.getElementById('output').textContent = nextItem();
-    }
-);
-*/
+// lib button
+function hitLib() {
+  playAudio(sound)
+  if (deck[i] == "Liberal") {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(deck[i]);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+
+    i++;
+
+    document.getElementById('counter').innerHTML = i;
+  }
+  else {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode("GAME OVER.");
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+
+    document.getElementById("lib-button").disabled = true;
+    document.getElementById("fasc-button").disabled = true;
+
+    // playAudio('gameover.wav')
+
+
+  }
+
+}
+
+// fasc button
+function hitFasc() {
+    playAudio(sound)
+
+  if (deck[i] == "Fascist") {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(deck[i]);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+
+    i++;
+    
+    document.getElementById('counter').innerHTML = i;
+  }
+  else {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode("GAME OVER.");
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+
+    document.getElementById("lib-button").disabled = true;
+    document.getElementById("fasc-button").disabled = true;
+
+    // playAudio('gameover.wav')
+
+  }
+
+}
 
 console.log(deck)
