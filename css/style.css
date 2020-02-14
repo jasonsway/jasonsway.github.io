@@ -1,0 +1,164 @@
+::selection
+{
+    color: #000;
+    background: #FFE304;
+}
+
+.name
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 58px;
+    letter-spacing: 1.8;
+    font-weight: 600;
+}
+
+.container-space
+{
+    margin-top: 124px;
+}
+
+.profession
+{
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    letter-spacing: 1.2px;
+    font-weight: 300;
+    margin-top: 22px;
+    color: #929292;
+}
+
+.description
+{
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    line-height: 46px;
+    max-width: 646px;
+    margin: 32px 0 52px 0;
+    color: #000;
+}
+
+.contact
+{
+    font-family: 'Poppins', sans-serif;
+    border-radius: 1px;
+    border: none;
+    color: #000;
+    background: #fff;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 16px 40px;
+    display: inline-block;
+    box-shadow: 0 6px 16px 0 rgba(0,0,0,0.08);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+
+.contact:hover
+{   
+    margin-bottom: 8px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1);
+    text-decoration: none;
+}
+
+
+.social
+{
+    margin-top: 60px;
+}
+
+.social a
+{
+    width: 28px;
+    display: inline-block;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    margin-right: 24px;
+    height: 28px;
+}
+
+.social a:last-child
+{
+    margin-right: 0;
+}
+
+.dribbble
+{
+    background-image: url('images/Dribbble.svg');
+}
+
+.behance
+{
+    background-image: url('images/Behance.svg');
+}
+
+.linkedin
+{
+    background-image: url('images/Linkedin.svg');
+}
+
+.instagram
+{
+    background-image: url('images/Instagram.svg');
+}
+
+.twitter
+{
+    background-image: url('images/Twitter.svg');
+}
+
+.link-color
+{
+    color: #117eff;
+}
+
+@media (max-width:479px)
+{   
+    .mobile-container
+    {
+        margin-top: 68px;
+    }
+    .mobile-name
+    {
+        font-size: 34px;
+        text-align: center;
+    }
+    .mobile-profession
+    {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 18px;
+        letter-spacing: 0.5px;
+    }
+    .mobile-description
+    {
+        font-size: 18px;
+        text-align: center;
+        line-height: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-top: 32px;
+    }
+    .mobile-row
+    {
+        text-align: center;
+    }
+}
+
+
+@media (max-width:321px)
+{
+
+    .mobile-sm-container
+    {
+        margin-top: 48px;
+    }
+
+    .mobile-sm-description
+    {
+        font-size: 16px;
+        line-height: 28px;
+        margin-top: 24px;
+        margin: 32px 0 48px 0;
+    }
+}
